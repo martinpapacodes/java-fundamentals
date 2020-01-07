@@ -1,9 +1,6 @@
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.TimeUnit;
 import java.lang.Thread;
-
 
 public class Main {
 
@@ -20,12 +17,13 @@ public class Main {
         // System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
         //Test for flipNHeads method
-        flipNHeads(2);
+        flipNHeads(4);
 
-        //Test for clock method
+        // Test for clock method
         // clock();
 
     }
+    //////////////////////////// Methods ////////////////////////////
 
     public static String pluralize(String word, int number) {
         String pluralizedWord = " ";
@@ -43,22 +41,33 @@ public class Main {
         boolean isRow = true;
 
         while (isRow) {
+            flipsCounter++; 
             double randomNumber = Math.random();
             if(randomNumber < .5) {
-                System.out.println("tails");
-                flipsCounter++;
+                System.out.println("tails");    
             } else {
                 System.out.println("heads");
-                flipsCounter++;
                 headCounter++;
-                if(headCounter == n) {
-                    isRow = false;
-                    System.out.println("It took " + flipsCounter + " flips to flip " + n + " heads in a row.");
-                }
+                    if(headCounter == n) {
+                        isRow = false;
+                        System.out.println("It took " + flipsCounter + " flips to flip " + n + " heads in a row.");
+                    }
             }
         }
     }
-    // Source: https://stackoverflow.com/questions/24104313/how-do-i-make-a-delay-in-java
+
+                    //     heads
+                    // tails
+                    // tails
+                    // tails
+                    // tails
+                    // tails
+                    // tails
+                    // heads
+                    // It took 8 flips to flip 2 heads in a row.
+
+
+    // Reference: https://stackoverflow.com/questions/24104313/how-do-i-make-a-delay-in-java
     public static void timer(int second){
         try
         {
