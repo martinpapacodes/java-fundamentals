@@ -6,21 +6,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Test for pluralize method
-        // int dogCount = 1;
-        // System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
+        // Test for pluralize method
+        int dogCount = 1;
+        System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
 
-        // int catCount = 2;
-        // System.out.println("I own " + catCount + " " + pluralize("cat", catCount) + ".");
+        int catCount = 2;
+        System.out.println("I own " + catCount + " " + pluralize("cat", catCount) + ".");
 
-        // int turtleCount = 0;
-        // System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
+        int turtleCount = 0;
+        System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
-        //Test for flipNHeads method
+        // Test for flipNHeads method
         flipNHeads(4);
 
         // Test for clock method
-        // clock();
+        clock();
 
     }
     //////////////////////////// Methods ////////////////////////////
@@ -55,17 +55,6 @@ public class Main {
             }
         }
     }
-
-                    //     heads
-                    // tails
-                    // tails
-                    // tails
-                    // tails
-                    // tails
-                    // tails
-                    // heads
-                    // It took 8 flips to flip 2 heads in a row.
-
 
     // Reference: https://stackoverflow.com/questions/24104313/how-do-i-make-a-delay-in-java
     public static void timer(int second){
