@@ -35,8 +35,18 @@ public class Library {
         return containDuplicates;
     }
 
+    public double calculateAverage(double[] arrayToBeCalculated) {
+        double sum = 0;
+        double average = 0;
+
+        for(double number : arrayToBeCalculated) {
+            sum += number;
+        }
+        average = sum / arrayToBeCalculated.length();
+
+        return average;
+    }
 
     
-
 }
 
