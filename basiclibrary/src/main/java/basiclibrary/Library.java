@@ -21,10 +21,32 @@ public class Library {
         return numberArray;
     }
 
-//    public boolean containsDuplicates(char[] charArray) {
-//
-//    }
+    public boolean containsDuplicates(char[] charArray) {
+        boolean containDuplicates = false;
+        char compareVariable = ' ';
+        for(int i = 0; i < charArray.length; i++){
+            compareVariable = charArray[i];
+            if(compareVariable == charArray[i]) {
+                containDuplicates = true;
+            } else {
+                containDuplicates = false;
+            }
+        }
+        return containDuplicates;
+    }
 
+    public double calculateAverage(double[] arrayToBeCalculated) {
+        double sum = 0;
+        double average = 0;
 
+        for(double number : arrayToBeCalculated) {
+            sum += number;
+        }
+        average = sum / arrayToBeCalculated.length();
+
+        return average;
+    }
+
+    
 }
 
