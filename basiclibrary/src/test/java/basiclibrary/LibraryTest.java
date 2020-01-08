@@ -4,11 +4,30 @@
 package basiclibrary;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
+    @Test public void testRoll() {
+        Library rollTest = new Library();
+
+        ArrayList<Integer> testArray = new ArrayList<>();
+        testArray.add(1);
+        testArray.add(2);
+        testArray.add(3);
+        testArray.add(4);
+
+        int expected = testArray.size();
+        int actual = rollTest.roll(4).size();
+
+
+        assertEquals(expected, actual);
     }
 }
