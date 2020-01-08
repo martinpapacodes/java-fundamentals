@@ -30,4 +30,11 @@ public class LibraryTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test public void testDuplicates() {
+        Library duplicatesTest = new Library();
+
+
+
+    }
 }

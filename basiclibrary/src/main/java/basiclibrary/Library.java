@@ -21,10 +21,22 @@ public class Library {
         return numberArray;
     }
 
-//    public boolean containsDuplicates(char[] charArray) {
-//
-//    }
+    public boolean containsDuplicates(char[] charArray) {
+        boolean containDuplicates = false;
+        char compareVariable = ' ';
+        for(int i = 0; i < charArray.length; i++){
+            compareVariable = charArray[i];
+            if(compareVariable == charArray[i]) {
+                containDuplicates = true;
+            } else {
+                containDuplicates = false;
+            }
+        }
+        return containDuplicates;
+    }
 
+
+    
 
 }
 
