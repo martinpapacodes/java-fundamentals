@@ -45,7 +45,7 @@ public class LibraryTest {
         double expected = 2.0;
 
 
-        assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, 0.1);
 
     }
 }
