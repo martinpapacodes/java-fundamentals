@@ -21,17 +21,14 @@ public class Library {
     }
 
     public boolean containsDuplicates(char[] charArray) {
-        boolean containDuplicates = false;
-        char compareVariable = ' ';
         for(int i = 0; i < charArray.length; i++){
-            compareVariable = charArray[i];
-            if(compareVariable == charArray[i]) {
-                containDuplicates = true;
-            } else {
-                containDuplicates = false;
+            for (int j = i + 1; j < charArray.length; j++) {
+                if(charArray[j] ==charArray[i]) {
+                    return true;
+                }
             }
         }
-        return containDuplicates;
+        return false;
     }
 
 //    public double calculateAverage(double[] arrayToBeCalculated) {
@@ -45,8 +42,6 @@ public class Library {
 //
 //        return average;
 //    }
-
-    public static 
 
 
 
