@@ -17,7 +17,7 @@ public class Main {
         System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
         // Test for flipNHeads method
-        flipNHeads(4);
+        flipNHeads(5);
 
 //         Test for clock method
         clock();
