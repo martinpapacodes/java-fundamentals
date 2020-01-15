@@ -27,14 +27,15 @@ public class LibraryTest {
         int expected = testArray.size();
         int actual = rollTest.roll(4).size();
 
-
         assertEquals(expected, actual);
     }
 
     @Test public void testDuplicates() {
         Library duplicatesTest = new Library();
 
-
-
+        char[] testArray = {'a', 'b', 'c', 'd', 'e', 'e'};
+        
+        boolean actual = duplicatesTest.containsDuplicates(testArray);
+        assertEquals("There are duplicates in the testArray", true, actual);
     }
 }
