@@ -31,11 +31,11 @@ public class Library {
         return false;
     }
 
-    public static double calculateAverage(double[] arrayToBeCalculated) {
-        double sum = 0;
-        double average = 0;
+    public static int calculateAverage(int[] arrayToBeCalculated) {
+        int sum = 0;
+        int average = 0;
 
-        for(double number : arrayToBeCalculated) {
+        for(int number : arrayToBeCalculated) {
             sum += number;
         }
         average = sum / arrayToBeCalculated.length;
@@ -43,6 +43,16 @@ public class Library {
         return average;
     }
 
+    public static int[] getLowestAverageOfMatrix(int[][] matrix) {
+        int[] lowestAverageArray = matrix[0];
+
+        for(int i = 0; i < matrix.length; i++) {
+            if(calculateAverage(matrix[i]) < calculateAverage(lowestAverageArray)) {
+                lowestAverageArray = matrix[i];
+            }
+        }
+        return lowestAverageArray;
+    }
 
 
 }
