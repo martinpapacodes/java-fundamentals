@@ -1,2 +1,18 @@
 # java-fundamentals
-First several labs of Java 401
+
+### Lab: 01 - Java primitives and control flow
+## Feature Task
+* Pluralize
+* FlipNHeads
+* clock
+ ---
+###Lab: 02 - Arrays, for loops, testing
+## Feature Task
+* roll
+* containsDuplicates
+* calculateAverage
+* getLowestAverageOfMatrix
+
+---
+
+
