@@ -19,7 +19,7 @@ public class Main {
         // Test for flipNHeads method
         flipNHeads(4);
 
-        // Test for clock method
+//         Test for clock method
         clock();
 
     }
@@ -38,18 +38,17 @@ public class Main {
     public static void flipNHeads(int n) {
         int flipsCounter = 0;
         int headCounter = 0;
-        boolean isRow = true;
 
-        while (isRow) {
+        while (headCounter < n) {
             flipsCounter++; 
             double randomNumber = Math.random();
             if(randomNumber < .5) {
-                System.out.println("tails");    
+                System.out.println("tails");
+                headCounter = 0;
             } else {
                 System.out.println("heads");
                 headCounter++;
                     if(headCounter == n) {
-                        isRow = false;
                         System.out.println("It took " + flipsCounter + " flips to flip " + n + " heads in a row.");
                     }
             }
