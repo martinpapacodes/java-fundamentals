@@ -38,4 +38,14 @@ public class LibraryTest {
         boolean actual = duplicatesTest.containsDuplicates(testArray);
         assertEquals("There are duplicates in the testArray", true, actual);
     }
+
+    @Test public void testAverage() {
+        double[] testArray = {2, 2 ,2 , 2, 2};
+        double actual = Library.calculateAverage(testArray);
+        double expected = 2.0;
+
+
+        assertEquals(expected, actual, 0);
+
+    }
 }

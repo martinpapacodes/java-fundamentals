@@ -31,17 +31,17 @@ public class Library {
         return false;
     }
 
-//    public double calculateAverage(double[] arrayToBeCalculated) {
-//        double sum = 0;
-//        double average = 0;
-//
-//        for(double number : arrayToBeCalculated) {
-//            sum += number;
-//        }
-//        average = sum / arrayToBeCalculated.length();
-//
-//        return average;
-//    }
+    public static double calculateAverage(double[] arrayToBeCalculated) {
+        double sum = 0;
+        double average = 0;
+
+        for(double number : arrayToBeCalculated) {
+            sum += number;
+        }
+        average = sum / arrayToBeCalculated.length;
+
+        return average;
+    }
 
 
 
