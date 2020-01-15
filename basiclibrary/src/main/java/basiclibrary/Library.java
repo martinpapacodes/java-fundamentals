@@ -4,6 +4,7 @@
 package basiclibrary;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -54,6 +55,37 @@ public class Library {
         return lowestAverageArray;
     }
 
+    public static String analyzeWeather(int[][] matrix) {
+        int low = matrix[0][0];
+        int high = matrix[0][0];
+        var unique = new HashSet<Integer>();
+
+        for(int[] array: matrix) {
+            for(int i = 0; i < matrix.length; i++) {
+                unique.add(array[i]);
+                if(array[i] < low) {
+                    low = array[i];
+                }
+
+                if(array[i] > high) {
+                    high = array[i];
+                }
+            }
+        }
+
+        String result = "High: " + high + "\n"
+                      + "Low: " + low + "\n";
+
+        for(int i = low; i < high; i++) {
+            if(!unique.contains(i)) {
+                result += "Never saw temperature: " + i + "\n";
+            }
+        }
+    return result;
+
+
+
+    }
 
 }
 
