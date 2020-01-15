@@ -5,6 +5,7 @@ package basiclibrary;
 
 import org.junit.Test;
 
+import javax.lang.model.SourceVersion;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -40,12 +41,33 @@ public class LibraryTest {
     }
 
     @Test public void testAverage() {
-        double[] testArray = {2, 2 ,2 , 2, 2};
-        double actual = Library.calculateAverage(testArray);
-        double expected = 2.0;
+        int[] testArray = {2, 2 ,2 , 2, 2};
+        int actual = Library.calculateAverage(testArray);
+        int expected = 2;
 
 
-        assertEquals(expected, actual, 0.1);
+        assertEquals(expected, actual);
+
+    }
+
+    @Test public void testMatrix() {
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+
+        int[] expected =  new int[] {55, 54, 60, 53, 59, 57, 61};
+        for(int number : expected) {
+            System.out.println(number);
+        }
+        int[] actual = Library.getLowestAverageOfMatrix(weeklyMonthTemperatures);
+        
+        for(int number : actual) {
+            System.out.println("number = " + number);
+        }
+        assertArrayEquals(expected, actual);
 
     }
 }
